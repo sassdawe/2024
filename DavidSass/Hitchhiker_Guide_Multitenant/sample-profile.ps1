@@ -23,6 +23,7 @@ function set-profile {
 
     $PSDefaultParameterValues["Connect-MgGraph:UseDeviceCode"] = $true
     $PSDefaultParameterValues["Connect-MgGraph:TenantId"] = $tenantId.trim('{}')
+    $PSDefaultParameterValues["Connect-MgGraph:ContextScope"] = 'Process'
     $PSDefaultParameterValues["Connect-MgGraph:Scopes"] = @("Group.Read.All", "Application.Read.All", "User.ReadBasic.All")
 
 
